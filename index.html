@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head> <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<head>
   <meta charset="UTF-8" />
-  <title>Блокнот Сервис — онлайн-запись клиентов</title>
+  <title>Bloknot — сервис онлайн-записи клиентов</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Онлайн-запись клиентов. Запуск за 5 минут. Клиенты записываются сами — без CRM и сложных систем." />
+  <meta name="description" content="Bloknot — сервис онлайн-записи клиентов. Запуск за 5 минут. Клиенты записываются сами." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
   <style>
     * {
@@ -16,34 +18,38 @@
 
     body {
       background: #ffffff;
-      color: #111111;
+      color: #111;
       line-height: 1.4;
     }
 
     .container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 32px 20px;
     }
 
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      margin-bottom: 80px;
+      align-items: center;
+      margin-bottom: 24px;
     }
 
     .logo {
       display: flex;
       align-items: center;
       gap: 12px;
+      font-size: 20px;
       font-weight: 600;
-      font-size: 18px;
     }
 
     .logo img {
       width: 36px;
       height: 36px;
+    }
+
+    .nav {
+      text-align: right;
     }
 
     .nav a {
@@ -53,9 +59,23 @@
       font-size: 15px;
     }
 
+    /* Видео */
+    .video-block {
+      margin: 32px 0 72px;
+      background: #f6f7f8;
+      border-radius: 16px;
+      height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 18px;
+    }
+
+    /* Hero */
     .hero {
-      max-width: 700px;
-      margin-bottom: 80px;
+      max-width: 720px;
+      margin-bottom: 72px;
     }
 
     h1 {
@@ -74,31 +94,29 @@
     .button {
       display: inline-block;
       padding: 14px 28px;
-      background: #111;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 16px;
       font-weight: 500;
+      text-decoration: none;
     }
 
-    .button.secondary {
-      background: #f2f2f2;
-      color: #111;
-      margin-left: 16px;
+    .button.primary {
+      background: #1FAF6D;
+      color: #fff;
     }
 
     .note {
-      margin-top: 12px;
+      margin-top: 10px;
       font-size: 13px;
       color: #777;
     }
 
+    /* Преимущества */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 40px;
-      margin-bottom: 100px;
+      margin-bottom: 96px;
     }
 
     .feature h3 {
@@ -111,53 +129,34 @@
       color: #555;
     }
 
-    .steps {
-      margin-bottom: 100px;
-      max-width: 700px;
+    /* CTA */
+    .cta {
+      background: #f6f7f8;
+      border-radius: 16px;
+      padding: 48px 32px;
+      text-align: center;
+      margin-bottom: 80px;
     }
 
-    .steps h2 {
+    .cta h2 {
       font-size: 32px;
-      margin-bottom: 32px;
-    }
-
-    .step {
       margin-bottom: 20px;
-      font-size: 17px;
-    }
-
-    .forwho {
-      margin-bottom: 100px;
-    }
-
-    .forwho h2 {
-      font-size: 32px;
-      margin-bottom: 24px;
-    }
-
-    .forwho ul {
-      list-style: none;
-    }
-
-    .forwho li {
-      font-size: 17px;
-      margin-bottom: 10px;
     }
 
     footer {
       border-top: 1px solid #eee;
-      padding: 40px 0;
+      padding: 32px 0;
       font-size: 14px;
       color: #777;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
       h1 {
         font-size: 36px;
       }
-
-      .subtitle {
-        font-size: 18px;
+      .video-block {
+        height: 220px;
       }
     }
   </style>
@@ -169,15 +168,19 @@
     <!-- HEADER -->
     <header>
       <div class="logo">
-        <!-- ЛОГОТИП: просто заменишь файл logo.svg -->
-        <img src="logo.svg" alt="Блокнот Сервис" />
-        <span>Блокнот Сервис</span>
+        <img src="logo.svg" alt="Bloknot">
+        <span>Bloknot</span>
       </div>
-      <nav class="nav">
+      <div class="nav">
         <a href="#">Войти</a>
         <a href="#">Регистрация</a>
-      </nav>
+      </div>
     </header>
+
+    <!-- VIDEO -->
+    <div class="video-block">
+      Видео о том, как работает сервис (будет позже)
+    </div>
 
     <!-- HERO -->
     <section class="hero">
@@ -187,10 +190,8 @@
         Клиенты записываются сами — без CRM и сложных систем.
       </p>
 
-      <a href="#" class="button">Попробовать бесплатно</a>
-      <a href="#" class="button secondary">Войти</a>
-
-      <div class="note">Без карты. Можно отменить в любой момент.</div>
+      <a href="#" class="button primary">Попробовать бесплатно</a>
+      <div class="note">Подписку можно отменить в любой момент</div>
     </section>
 
     <!-- FEATURES -->
@@ -200,52 +201,35 @@
         <p>Без обучения и сложных настроек.</p>
       </div>
       <div class="feature">
-        <h3>📒 Вместо блокнота</h3>
-        <p>Больше никакой путаницы в WhatsApp.</p>
+        <h3>📒 Онлайн вместо блокнота</h3>
+        <p>Никакой путаницы в записях.</p>
       </div>
       <div class="feature">
-        <h3>🔔 Подтверждения</h3>
-        <p>Автоматически в WhatsApp и Telegram.</p>
-      </div>
-      <div class="feature">
-        <h3>🖼 Логотип и фото</h3>
-        <p>Добавляйте логотип и работы.</p>
+        <h3>🔔 Автоподтверждение</h3>
+        <p>WhatsApp и Telegram.</p>
       </div>
       <div class="feature">
         <h3>📱 Любое устройство</h3>
-        <p>Телефон, планшет или компьютер.</p>
+        <p>Работает с телефона и компьютера.</p>
+      </div>
+      <div class="feature">
+        <h3>🖼 Логотип и фото</h3>
+        <p>Добавляйте свои работы.</p>
       </div>
       <div class="feature">
         <h3>🧘 Простота</h3>
-        <p>Понятно вам и вашему клиенту.</p>
+        <p>Понятно вам и клиенту.</p>
       </div>
     </section>
 
-    <!-- STEPS -->
-    <section class="steps">
-      <h2>Как это работает</h2>
-      <div class="step">1️⃣ Вы указываете услуги и график</div>
-      <div class="step">2️⃣ Отправляете клиентам ссылку</div>
-      <div class="step">3️⃣ Клиенты записываются сами</div>
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Клиенты могут записываться уже сегодня</h2>
+      <a href="#" class="button primary">Записаться</a>
     </section>
 
-    <!-- FOR WHO -->
-    <section class="forwho">
-      <h2>Для кого подойдёт</h2>
-      <ul>
-        <li>— Бьюти-мастера</li>
-        <li>— Массажисты</li>
-        <li>— Репетиторы</li>
-        <li>— Частные специалисты</li>
-      </ul>
-      <p style="margin-top: 16px; color:#555;">
-        Если вы ведёте запись в блокноте — вам подойдёт.
-      </p>
-    </section>
-
-    <!-- FOOTER -->
     <footer>
-      © 2026 Блокнот Сервис — онлайн-запись клиентов
+      © 2026 Bloknot — сервис онлайн-записи клиентов
     </footer>
 
   </div>
