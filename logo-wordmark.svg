@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 420 120"
+     width="420"
+     height="120">
+
+  <!-- Зелёный круг: ближе к слову и чуть выше -->
+  <circle cx="62" cy="56" r="32" fill="#4CAF50"/>
+
+  <!-- Белая галочка (сдвинута вместе с кругом) -->
+  <path d="M46 56L58 68L78 44"
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-width="7"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Текст Bloknot -->
+  <text x="112" y="74"
+        font-size="56"
+        font-weight="700"
+        font-style="italic"
+        fill="#2B2F33"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif"
+        letter-spacing="-1">
+    Bloknot
+  </text>
+</svg>
